@@ -1,0 +1,11 @@
+from scipy import misc #imread
+
+import gui_functions as gui
+import helper_functions as help
+import radon_functions as radon
+
+image = misc.imread(imagename, flatten=True).astype('float64')
+
+if len(image.shape)==3: #returns three if the picture is color, else two
+    image=grey_scale(image)
+
